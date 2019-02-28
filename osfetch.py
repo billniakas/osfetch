@@ -141,7 +141,8 @@ else:
 ##        linuxtype[0]=linuxtype[0].strip(" ")
 ##    else:
 ##        pass
-    os_type = linuxtype[5:].lower()
+
+    os_type = linuxtype[5:].strip(" 32").lower()
     if os_type not in os_dict.keys():
         os_type = 'linux'
     #ostype=("\nYou are using",os_dict[os_type][0],platform[2],"\n")
